@@ -52,11 +52,18 @@ Step 7: Download the source code:
 
 			Open Terminal $ git clone https://github.com/ashwanikr17/Pollution_Sensing_IOT.git
 			
+			
+Step 8: Upload sensor_bme_mpu_pms.ino to Arduino board using Arduino IDE.
 
-
-Step 8: To run the program:
+Step 9: To run the program:
 
 		$ sudo python sensor_polling_*.py
 			
 			
-		
+Known Issues : 
+a) PiCamera out of resources
+	Reason - Improper stopping of code
+	Fix - Reboot
+b) Could not open serial device
+	Reason - Arduino board appearing as a device other than /dev/ttyUSB0
+	Fix - Replace /dev/ttyUSB0 in "ser = serial.Serial('/dev/ttyUSB0',9600)" with appropriate device
